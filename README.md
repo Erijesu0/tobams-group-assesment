@@ -1,24 +1,28 @@
 # Tobams Group Frontend Assessment - Static Page Implementation
 
-**Live Deployment URL:** [Insert your Vercel/Netlify Link Here]
+**Live Deployment URL:** https://tobams-group-assesment-git-main-erijesu0s-projects.vercel.app/
 **Figma Design:** [View Design File](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
 
 ## Overview
+
 This repository contains a pixel-perfect, production-ready static page implementation for the Tobams Group Frontend Intern Assessment. The project translates the provided Figma design into clean, maintainable code focusing on responsive layout, semantic HTML, and modular component architecture.
 
 ## Tech Stack
-* **Framework:** Next.js (App Router, Latest Version)
-* **Styling:** Tailwind CSS (Strictly native utility classes; no external UI kits or CSS frameworks like Bootstrap/MUI)
-* **Optimization:** `next/image` for assets, `next/font` for typography (Nunito)
+
+- **Framework:** Next.js (App Router, Latest Version)
+- **Styling:** Tailwind CSS (Strictly native utility classes; no external UI kits or CSS frameworks like Bootstrap/MUI)
+- **Optimization:** `next/image` for assets, `next/font` for typography (Nunito)
 
 ## Setup Instructions
+
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
    git clone [Insert your GitHub repo URL here]
    cd [Insert your repo folder name]
-Install dependencies:
+   Install dependencies:
+   ```
 
 Bash
 npm install
