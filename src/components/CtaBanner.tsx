@@ -1,29 +1,40 @@
-// src/components/CtaBanner.tsx
+"use client";
 
 export function CtaBanner() {
+  const scrollToHero = () => {
+    const heroElement = document.getElementById("hero");
+    if (heroElement) {
+      heroElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="w-full bg-[#FFFFFF] pt-8 pb-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-[1134px] mx-auto bg-[#571244] text-white rounded-[8px] py-[32px] px-[24px] sm:px-[64px] flex flex-col items-center justify-center text-center space-y-[32px] shadow-sm">
-        {/* Banner Heading */}
-        <div className="space-y-1 max-w-2xl">
-          <h2 className="text-base sm:text-lg lg:text-xl font-medium tracking-tight text-white leading-snug">
-            Want to accelerate professional growth and development at your
-            organisation?
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl font-medium text-white">
-            See how we can help.
-          </p>
-        </div>
+    <section className="w-full py-8 md:py-16 px-4 flex justify-center items-center">
+      <div
+        className="w-full max-w-[327px] md:max-w-[1006px] min-h-[240px] md:min-h-[160px] bg-[#571244] rounded-[8px] 
+                   px-[24px] py-[32px] md:px-[48px] md:py-[40px] flex flex-col items-center justify-center 
+                   gap-[32px] md:gap-[24px] text-center shadow-sm"
+      >
+        {/* Mobile Headline */}
+        <p className="block md:hidden font-['Nunito',sans-serif] font-semibold text-[16px] leading-[150%] tracking-[0.03em] text-white max-w-[279px]">
+          Don&apos;t just dream it—let&apos;s build it! Click now and start your
+          project with Tobams Group. Your journey to digital excellence begins
+          here.
+        </p>
+
+        {/* Desktop Headline */}
+        <p className="hidden md:block font-['Nunito',sans-serif] font-semibold text-[20px] leading-[150%] tracking-[0.03em] text-white max-w-[800px]">
+          Want to accelerate professional growth and development at your
+          organisation? See how we can help.
+        </p>
 
         {/* Action Button */}
-        <div>
-          <button
-            type="button"
-            className="bg-white hover:bg-gray-100 text-[#571244] px-6 py-3 rounded-[6px] text-sm font-semibold transition-colors shadow-xs focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#571244]"
-          >
-            Book a Consultation
-          </button>
-        </div>
+        <button
+          onClick={scrollToHero}
+          className="bg-white text-[#151515] hover:bg-gray-100 font-['Nunito',sans-serif] font-semibold text-[14px] leading-[150%] px-6 py-3 rounded-[8px] transition-colors inline-flex items-center justify-center whitespace-nowrap cursor-pointer"
+        >
+          Book a Consultation
+        </button>
       </div>
     </section>
   );

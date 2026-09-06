@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative w-full bg-[#000000] text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section
+      id="hero"
+      className="relative w-full bg-[#000000] text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden"
+    >
       {/* Background Image Container with adjusted opacity */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,8 +25,12 @@ export function Hero() {
           What We Do
         </span>
 
-        <h1 className="font-heading text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-[120%] tracking-[-0.02em] text-center text-white">
-          Training and Development
+        <h1 className="font-heading font-semibold text-white leading-[120%] tracking-[0.03em] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px]">
+          {/* Mobile view (<768px) */}
+          <span className="inline md:hidden">Learning and Development</span>
+
+          {/* Tablet & Desktop view (≥768px) */}
+          <span className="hidden md:inline">Training and Development</span>
         </h1>
 
         <p className="font-sans text-[18px] font-semibold leading-[150%] text-center text-white">

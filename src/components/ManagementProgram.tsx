@@ -1,4 +1,3 @@
-// src/components/ManagementProgram.tsx
 import Image from "next/image";
 
 export function ManagementProgram() {
@@ -10,11 +9,15 @@ export function ManagementProgram() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-[1312px] mx-auto bg-[#2C0922] text-white rounded-[20px] p-6 sm:p-10 lg:p-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <section className="w-full bg-white py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1280px] mx-auto bg-[#2C0922] text-white rounded-[20px] p-5 sm:p-8 lg:p-12">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+          {/* Section Heading for Mobile (Top Position) */}
+          <h2 className="block lg:hidden font-nunito text-[18px] xs:text-[20px] font-bold tracking-[0.03em] text-white leading-[150%] text-center whitespace-nowrap overflow-hidden text-ellipsis w-full">
+            Management Development Program
+          </h2>
           {/* Left Column: Image */}
-          <div className="lg:col-span-6 relative w-full h-[320px] sm:h-[420px] lg:h-[500px] rounded-[16px] overflow-hidden">
+          <div className="w-full lg:w-1/2 relative h-[240px] sm:h-[360px] lg:h-[480px] rounded-[16px] overflow-hidden shrink-0">
             <Image
               src="/management-program.jpg"
               alt="Management Development Program team"
@@ -25,12 +28,13 @@ export function ManagementProgram() {
           </div>
 
           {/* Right Column: Content */}
-          <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col gap-5 justify-center">
+            {/* Section Heading for Desktop */}
+            <h2 className="hidden lg:block font-nunito text-[24px] font-bold tracking-[0.03em] text-white leading-[150%] whitespace-nowrap">
               Management Development Program
             </h2>
 
-            <div className="space-y-4 text-gray-200 text-xs sm:text-sm leading-relaxed">
+            <div className="flex flex-col gap-3 text-[#E0E0E0] font-sans text-[14px] sm:text-[15px] leading-[160%]">
               <p>
                 Tobams Group offers a comprehensive Management Development
                 Program designed to equip corporate organisations with the
@@ -45,23 +49,30 @@ export function ManagementProgram() {
               </p>
             </div>
 
-            {/* Light Purple Feature Pills with Lightning Icon */}
-            <div className="space-y-3 pt-2">
+            {/* Feature Pills */}
+            <div className="flex flex-col gap-2.5 w-full">
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#6B4B60]/50 hover:bg-[#6B4B60]/70 transition-colors border border-white/10 rounded-lg px-4 py-3 flex items-center space-x-3 text-sm font-medium text-white"
+                  className="flex w-full h-[40px] items-center gap-2 rounded-[8px] bg-[#8F6182] px-2 py-1 transition-colors"
                 >
-                  {/* Lightning Bolt SVG Icon */}
                   <svg
-                    className="w-4 h-4 text-white shrink-0 fill-current"
-                    viewBox="0 0 24 24"
-                    width={12.44}
-                    height={16}
+                    width="19"
+                    height="24"
+                    viewBox="0 0 19 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="shrink-0 text-white fill-current"
+                    aria-hidden="true"
                   >
-                    <path d="M13 2L3 14h7v8l10-12h-7V2z" />
+                    <path
+                      d="M11 0L0 13.5H9.5L8 24L19 10.5H9.5L11 0Z"
+                      fill="#FFFFFF"
+                    />
                   </svg>
-                  <span>{item}</span>
+                  <span className="font-sans font-normal text-[18px] text-white leading-[150%]">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>

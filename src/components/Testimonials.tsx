@@ -49,7 +49,7 @@ const testimonialsData: Testimonial[] = [
     id: 5,
     name: "Sarah Johnson",
     role: "CEO, Tech Innovations Inc.",
-    avatar: "/Testimonials/Sarah Johnson.png",
+    avatar: "/Testimonials/Aisha yusuf.png",
     content:
       "Their training programs drastically improved our team's productivity and operational clarity. The instructors were patient, structured, and deeply knowledgeable.",
   },

@@ -1,10 +1,9 @@
-// src/components/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#0F000B] text-white">
+    <footer className="w-full bg-[#0F000B] text-white font-['Nunito',sans-serif]">
       {/* Top Banner: Call to Action */}
       <div className="bg-[#1F0018] border-b border-[#2E1428] px-6 py-12 md:px-12 lg:px-20">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -19,7 +18,7 @@ export function Footer() {
 
           <Link
             href="/contact"
-            className="bg-[#571244] hover:bg-[#430D34] text-white font-medium text-sm px-6 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1F0018]"
+            className="bg-[#571244] hover:bg-[#430D34] text-white font-medium text-sm px-6 py-3 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1F0018]"
           >
             Get In Touch
           </Link>
@@ -83,10 +82,10 @@ export function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* What We Do */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white tracking-wide">
+              <h3 className="text-sm font-semibold text-[#FFFFFF] tracking-wide">
                 What We Do
               </h3>
-              <ul className="space-y-2.5 text-xs text-gray-300">
+              <ul className="space-y-2.5 text-xs text-[#F8F8F8]">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Sustainability Services
@@ -127,10 +126,10 @@ export function Footer() {
 
             {/* Company */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white tracking-wide">
+              <h3 className="text-sm font-semibold text-[#FFFFFF] tracking-wide">
                 Company
               </h3>
-              <ul className="space-y-2.5 text-xs text-gray-300">
+              <ul className="space-y-2.5 text-xs text-[#F8F8F8]">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     About
@@ -186,10 +185,10 @@ export function Footer() {
 
             {/* Solution */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white tracking-wide">
+              <h3 className="text-sm font-semibold text-[#FFFFFF] tracking-wide">
                 Solution
               </h3>
-              <ul className="space-y-2.5 text-xs text-gray-300">
+              <ul className="space-y-2.5 text-xs text-[#F8F8F8]">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Tobams Group Academy
@@ -230,41 +229,11 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Middle Box: Registered Offices & Contact Information */}
-        <div className="bg-[#1A0515] border border-[#2E1428] rounded-xl p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 text-xs text-gray-300">
-          {/* Registered Offices */}
-          <div className="lg:col-span-8 space-y-4">
-            <h4 className="text-sm font-semibold text-white">
-              Registered Offices
-            </h4>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* UK Office */}
-              <div className="space-y-1">
-                <p className="font-semibold text-white">United Kingdom</p>
-                <p className="text-gray-400">
-                  07451196 (Registered by Company House)
-                </p>
-                <p>
-                  Vice Cottage, 215 North Street, Romford, Essex, United
-                  Kingdom, RM1 4QA
-                </p>
-              </div>
-
-              {/* Nigeria Office */}
-              <div className="space-y-1">
-                <p className="font-semibold text-white">Nigeria</p>
-                <p className="text-gray-400">
-                  RC 1048722 (Registered by the Corporate Affairs Commission)
-                </p>
-                <p>4 Main Close, Anifowose, Ikeja</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="lg:col-span-4 space-y-4 lg:border-l lg:border-[#2E1428] lg:pl-8">
-            <h4 className="text-sm font-semibold text-white">
+        {/* Middle Box: Registered Offices & Contact Information Card */}
+        <div className="bg-[#FFFFFF0F] border border-[#2E1428] rounded-xl p-6 sm:p-8 flex flex-col lg:grid lg:grid-cols-12 gap-8 text-xs text-gray-300">
+          {/* Contact Information (Mobile First: Order 1, Desktop: Order 2) */}
+          <div className="order-1 lg:order-2 lg:col-span-4 space-y-4 lg:border-l lg:border-[#2E1428] lg:pl-8">
+            <h4 className="text-base font-bold text-white">
               Contact Information
             </h4>
 
@@ -273,16 +242,49 @@ export function Footer() {
                 <span className="text-[#E94E58]">✉</span>
                 <a
                   href="mailto:theteam@tobamsgroup.com"
-                  className="hover:underline"
+                  className="hover:underline text-gray-300"
                 >
                   theteam@tobamsgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-[#E94E58]">📞</span>
-                <a href="tel:+447886600748" className="hover:underline">
+                <a
+                  href="tel:+447886600748"
+                  className="hover:underline text-gray-300"
+                >
                   +447886600748
                 </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Registered Offices (Mobile: Order 2, Desktop: Order 1) */}
+          <div className="order-2 lg:order-1 lg:col-span-8 space-y-4">
+            <h4 className="text-base font-bold text-white">
+              Registered Offices
+            </h4>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* UK Office */}
+              <div className="space-y-1">
+                <p className="font-semibold text-[#E94E58]">United Kingdom</p>
+                <p className="text-gray-300">
+                  07451196 (Registered by Company House)
+                </p>
+                <p className="text-gray-300">
+                  Vine Cottages, 215 North Street, Romford, Essex, United
+                  Kingdom, RM1 4QA
+                </p>
+              </div>
+
+              {/* Nigeria Office */}
+              <div className="space-y-1">
+                <p className="font-semibold text-[#E94E58]">Nigeria</p>
+                <p className="text-gray-300">
+                  RC 1048722 (Registered by the Corporate Affairs Commission)
+                </p>
+                <p className="text-gray-300">4, Muaz Close, Angwari-Rimi</p>
               </div>
             </div>
           </div>
@@ -290,7 +292,7 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Legal */}
         <div className="pt-8 border-t border-[#2E1428] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p>© Copyright © Tobams Group. 2024. All rights reserved.</p>
+          <p>© Copyright Tobams Group, 2024. All rights reserved.</p>
 
           <div className="flex items-center space-x-6">
             <Link href="#" className="hover:text-white transition-colors">

@@ -1,153 +1,137 @@
-// src/components/Training.tsx
 import Image from "next/image";
+
+interface TrainingCategory {
+  title: string;
+  description: string;
+  bullets: string[];
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const trainingData: TrainingCategory[] = [
+  {
+    title: "Corporate Trainings",
+    description:
+      "Empower your team with our customised Corporate Training programs designed to address the unique needs and objectives of your organisation. Our expert facilitators work closely with your team to deliver tailored learning experiences that align with your company's goals and values.",
+    bullets: [
+      "Leadership Training",
+      "Strategic Planning and Implementation",
+      "Project Management",
+      "Sustainability Training",
+      "Customised Training",
+    ],
+    imageSrc: "/corporate-training.jpg",
+    imageAlt: "Corporate Trainings presentation",
+  },
+  {
+    title: "Personalised Individual Training",
+    description:
+      "Embark on a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals. From technical skills mastery to soft skills enhancement, our courses cover a wide spectrum of topics to meet the evolving needs of today's professionals.",
+    bullets: [
+      "Leadership Training",
+      "Soft Skills Development",
+      "Industry Specific Knowledge",
+      "Technical Skills Enhancement",
+      "Time Management and Productivity",
+      "Career Development",
+    ],
+    imageSrc: "/individual-training.jpg",
+    imageAlt: "Personalised Individual Training workshop",
+  },
+  {
+    title: "Capacity Development",
+    description:
+      "At Tobams Group, we believe in the power of continuous learning. Our capacity building programs are designed to strengthen skillsets and drive performance, ensuring individuals and organisations remain competitive in their fields.",
+    bullets: [
+      "Skill Gap Analysis",
+      "Customised Workshops",
+      "Performance Coaching",
+      "Organizational Development",
+    ],
+    imageSrc: "/capacity-development.jpg",
+    imageAlt: "Capacity Development Programs session",
+  },
+];
+
+function ThunderIcon() {
+  return (
+    <svg
+      width="13"
+      height="16"
+      viewBox="0 0 13 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
+    >
+      <path
+        d="M7.5 0.5L1 9.5H6.5L5.5 15.5L12 6.5H6.5L7.5 0.5Z"
+        fill="#1D0617"
+        stroke="#480F39"
+        strokeWidth="1.52"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export function Training() {
   return (
-    <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-16 text-[#1A0A10]">
-      <div className="max-w-[1280px] mx-auto space-y-24">
-        {/* 1. Corporate Trainings */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#3B112C]">
-              Corporate Trainings
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Empower your team with our customized Corporate Training programs
-              designed to address the unique needs and objectives of your
-              organization. Our expert facilitators work closely with your team
-              to deliver tailored learning experiences that align with your
-              company’s goals and values.
-            </p>
-            <ul className="space-y-3 text-sm text-gray-700 font-medium pt-2">
-              {[
-                "Leadership Training",
-                "Strategic Planning and Implementation",
-                "Project Management",
-                "Sustainability Training",
-                "Customised Training",
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  {/* Lightning Bolt SVG Icon */}
-                  <span className="p-1 rounded-md  text-[#2C0922] flex items-center justify-center shrink-0">
-                    <svg
-                      className="w-3.5 h-3.5 fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-                    </svg>
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <section className="w-full bg-white py-[40px] px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-[48px] lg:gap-[60px]">
+        {trainingData.map((item, index) => {
+          const isEven = index % 2 === 1;
 
-          <div className="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden shadow-sm">
-            <Image
-              src="/corporate-training.jpg"
-              alt="Corporate Trainings"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+          return (
+            <div
+              key={item.title}
+              className={`flex flex-col ${
+                isEven ? "lg:flex-row-reverse" : "lg:flex-row"
+              } items-start lg:items-center gap-6 lg:gap-16`}
+            >
+              {/* Heading: Placed at the top on mobile */}
+              <h2 className="block lg:hidden w-full font-heading text-[22px] sm:text-[26px] font-semibold leading-[125%] tracking-normal text-[#151515] break-words">
+                {item.title}
+              </h2>
 
-        {/* 2. Personalised Individual Training (Alternated layout) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden shadow-sm order-2 lg:order-1">
-            <Image
-              src="/individual-training.jpg"
-              alt="Personalised Individual Training"
-              fill
-              className="object-cover"
-            />
-          </div>
+              {/* Image Block: Renders immediately under heading on mobile, side-by-side on desktop */}
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="relative w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-t-[24px] rounded-b-[8px] lg:rounded-[16px] overflow-hidden">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
-          <div className="space-y-4 order-1 lg:order-2">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#3B112C]">
-              Personalised Individual Training
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Begin a journey of lifelong learning and professional development
-              with Tobams Group’s diverse range of training programs for
-              individuals. From technical skills mastery to soft skills
-              enhancement, our courses cover a wide spectrum of topics to meet
-              the evolving needs of today’s professionals.
-            </p>
-            <ul className="space-y-3 text-sm text-gray-700 font-medium pt-2">
-              {[
-                "Leadership Development",
-                "Soft Skills Development",
-                "Industry Specific Knowledge",
-                "Technical Skills Enhancement",
-                "Time Management and Productivity",
-                "Career Development",
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  {/* Lightning Bolt SVG Icon */}
-                  <span className="p-1 rounded-md  text-[#2C0922] flex items-center justify-center shrink-0">
-                    <svg
-                      className="w-3.5 h-3.5 fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-                    </svg>
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+              {/* Text Block */}
+              <div className="w-full lg:w-1/2 flex flex-col gap-4">
+                {/* Heading: Hidden on mobile (rendered above image), visible on desktop */}
+                <h2 className="hidden lg:block font-heading text-[34px] md:text-[40px] font-semibold leading-[150%] tracking-[0.03em] text-[#151515]">
+                  {item.title}
+                </h2>
 
-        {/* 3. Capacity Development */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#3B112C]">
-              Capacity Development
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              At Tobams Group, we empower individuals and organizations through
-              tailored training programs, expert-led workshops, and personalized
-              mentorship. We are committed to your success and growth. We are
-              dedicated to providing a comprehensive suite of benefits designed
-              to foster your development and success.
-            </p>
+                {/* Subtitle / Description */}
+                <p className="font-sans text-[15px] sm:text-[16px] md:text-[18px] font-normal leading-[150%] tracking-normal text-[#696969]">
+                  {item.description}
+                </p>
 
-            <ul className="space-y-3 text-sm text-gray-700 font-medium pt-2">
-              {[
-                "Tailored Training Programs",
-                "Expert-Led Workshops",
-                "Personalized Mentorship",
-                "Technical Skills Enhancement",
-                "Collaborative Learning Environment",
-                "Ongoing Support and Resources",
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  {/* Lightning Bolt SVG Icon */}
-                  <span className="p-1 rounded-md  text-[#2C0922] flex items-center justify-center shrink-0">
-                    <svg
-                      className="w-3.5 h-3.5 fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-                    </svg>
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden shadow-sm">
-            <Image
-              src="/capacity-development.jpg"
-              alt="Capacity Development"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+                {/* Bullet Points with Thunder Vector Symbol */}
+                <ul className="flex flex-col gap-3 pt-1">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-center gap-3">
+                      <ThunderIcon />
+                      <span className="font-sans text-[15px] sm:text-[16px] md:text-[18px] font-normal leading-[150%] tracking-normal text-[#696969]">
+                        {bullet}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
