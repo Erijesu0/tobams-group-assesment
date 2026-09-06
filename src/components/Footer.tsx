@@ -17,7 +17,7 @@ export function Footer() {
           </div>
 
           <Link
-            href="/contact"
+            href="#top"
             className="bg-[#571244] hover:bg-[#430D34] text-white font-medium text-sm px-6 py-3 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1F0018]"
           >
             Get In Touch
@@ -49,7 +49,9 @@ export function Footer() {
             </p>
 
             {/* Social Icons */}
+            {/* Social Icons */}
             <div className="flex items-center space-x-3 pt-2">
+              {/* LinkedIn */}
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -59,13 +61,33 @@ export function Footer() {
               >
                 <span className="font-bold text-sm">in</span>
               </a>
+
+              {/* Instagram */}
               <a
-                href="#"
-                aria-label="Website"
-                className="w-9 h-9 rounded-full bg-white text-[#0F000B] flex items-center justify-center hover:bg-gray-200 transition-colors"
+                href="#top"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-[#151515]  text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
               >
-                <span className="font-bold text-sm">🌐</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
               </a>
+
+              {/* X (Twitter) */}
               <a
                 href="https://x.com"
                 target="_blank"
@@ -215,7 +237,10 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link
+                    href="#top"
+                    className="hover:text-white transition-colors"
+                  >
                     Book a Consultation
                   </Link>
                 </li>
@@ -295,13 +320,13 @@ export function Footer() {
           <p>© Copyright Tobams Group, 2024. All rights reserved.</p>
 
           <div className="flex items-center space-x-6">
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="#top" className="hover:text-white transition-colors">
               Terms and Conditions
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="#top" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="#top" className="hover:text-white transition-colors">
               Cookies Policy
             </Link>
           </div>

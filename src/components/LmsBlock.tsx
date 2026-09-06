@@ -11,8 +11,8 @@ const courses = [
 
 export function LmsBlock() {
   return (
-    <section className="w-full bg-[#571244]/10 py-10 px-4 sm:px-6 md:py-16 lg:px-8">
-      <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-6 md:gap-10">
+    <section className="w-full  bg-[#571244]/10 py-10 lg:py-[40px] px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1280px]  mx-auto flex flex-col items-center gap-6 md:gap-10">
         {/* Section Heading */}
         <h2 className="font-heading text-[28px] sm:text-[36px] md:text-[44px] font-semibold text-[#571244] text-center leading-[130%]">
           Learning Management System

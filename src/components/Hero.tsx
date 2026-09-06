@@ -21,7 +21,7 @@ export function Hero() {
 
       {/* Content Container */}
       <div className="relative z-10 max-w-[1440px] mx-auto text-center flex flex-col items-center justify-center space-y-6">
-        <span className="bg-white/10 text-xs md:text-sm px-4 py-1.5 rounded-full uppercase tracking-wider font-semibold border border-white/20 backdrop-blur-sm">
+        <span className=" bg-[#FFFFFF1A] text-xs md:text-sm px-6 py-2.5 rounded-full uppercase tracking-wider font-semibold text-sm border border-white/20 backdrop-blur-sm text-[12px] font-['Nunito']">
           What We Do
         </span>
 

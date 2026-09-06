@@ -68,7 +68,7 @@ export function Header() {
               link.hasDropdown ? (
                 <button
                   key={index}
-                  className="flex items-center gap-1 hover:text-[#571244] transition-colors"
+                  className="flex items-center gap-1 hover:text-[#571244] transition-colors cursor-pointer"
                 >
                   {link.label}
                   <svg
