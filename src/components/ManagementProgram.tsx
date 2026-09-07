@@ -13,7 +13,7 @@ export function ManagementProgram() {
       <div className="max-w-[1280px] mx-auto bg-[#2C0922] text-white rounded-[20px] p-5 sm:p-8 lg:p-12">
         <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
           {/* Section Heading for Mobile (Top Position) */}
-          <h2 className="block lg:hidden font-nunito text-[18px] xs:text-[20px] font-bold tracking-[0.03em] text-white leading-[150%] text-center whitespace-nowrap overflow-hidden text-ellipsis w-full">
+          <h2 className="block lg:hidden font-nunito text-lg sm:text-xl font-bold tracking-[0.03em] text-white leading-tight text-center w-full px-2">
             Management Development Program
           </h2>
           {/* Left Column: Image */}
@@ -50,7 +50,7 @@ export function ManagementProgram() {
             </div>
 
             {/* Feature Pills */}
-            <div className="flex flex-col gap-2.5 w-full">
+            <div className="flex flex-col gap-3 w-full">
               {highlights.map((item, index) => (
                 <div
                   key={index}
@@ -70,7 +70,7 @@ export function ManagementProgram() {
                       fill="#FFFFFF"
                     />
                   </svg>
-                  <span className="font-sans font-normal text-[18px] text-white leading-[150%]">
+                  <span className=" shrink-0 font-sans font-normal text-[18px] text-white leading-[150%]">
                     {item}
                   </span>
                 </div>

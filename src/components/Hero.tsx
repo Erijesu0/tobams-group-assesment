@@ -39,8 +39,8 @@ export function Hero() {
           today's ever-evolving landscape.
         </p>
 
-        <div className="pt-2">
-          <button className="bg-[#571244] hover:bg-[#d63d47] text-white px-6 py-3 rounded-md text-sm md:text-base font-medium transition-colors shadow-lg">
+        <div className="pt-2 relative z-10">
+          <button className="bg-[#571244] hover:bg-[#d63d47] active:bg-[#d63d47] text-white px-6 py-3 rounded-md text-sm md:text-base font-medium transition-colors shadow-lg cursor-pointer">
             Book a Consultation
           </button>
         </div>

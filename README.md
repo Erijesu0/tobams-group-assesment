@@ -19,8 +19,8 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [Insert your GitHub repo URL here]
-   cd [Insert your repo folder name]
+   git clone https://github.com/Erijesu0/tobams-group-assesment
+   cd tobams-group-assesment
    Install dependencies:
    ```
 
@@ -34,7 +34,7 @@ View the application:
 Open http://localhost:3000 in your browser.
 
 Design Decisions & Technical Assumptions
-Figma Fidelity & Responsiveness: The layout strictly adheres to the provided Figma dimensions. All responsiveness is handled exclusively using standard Tailwind breakpoints (sm:, md:, lg:) to ensure proper display across mobile (425px), tablet (768px), and desktop (1280px+) screens. No custom CSS media queries were used.
+Figma Fidelity & Responsiveness: The layout strictly adheres to the provided Figma dimensions. All responsiveness is handled exclusively using standard Tailwind breakpoints (sm:, md:, lg:) to ensure proper display across mobile (425px), tablet (768px), and desktop (1280px+) screens. No custom CSS media queries were used. Little twerks were made to layout that were not understood clearly.
 
 Component Architecture: To prevent a monolithic codebase, the UI is modularized into dedicated, reusable components within the src/components/ directory (e.g., Header.tsx, Hero.tsx, LmsBlock.tsx, Footer.tsx).
 
